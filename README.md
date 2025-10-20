@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SOPHIA.COM Introduction to Web Development
 
-## Getting Started
+# UNIT 3 Touchstone 3: Develop a Functional Website
 
-First, run the development server:
+# REQUIREMENTS:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## All the pages should contain a header and a footer section, where the following requirements should be met:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- The header should include the client logo, a webpage title, and a functional navigation bar.
+- The footer should include a subscribe-to-newsletter feature, social media links, and navigation links to other webpages.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## The Homepage should include the following:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Client highlights
+- Shopping promos
+- Product/item images
+- Shopping perks
+- Categories of products
 
-## Learn More
+## The Gallery page should include the following:
 
-To learn more about Next.js, take a look at the following resources:
+- A “View Shopping Cart” button
+- Items/services sold by the client in a tabular format
+- An image, a brief description, and an “Add to Cart” button for each item
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## The About Us page should include the following:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- A description of the client, including the business hours
+- A form for client feedback and custom orders
 
-## Deploy on Vercel
+## The custom page can include the following:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Customer testimonials
+- Community involvements
+- Events and collaborations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Client Info: Bloom Valley Nursery
+
+## About:
+
+Bloom Valley Nursery operates as a local, family-owned plant nursery in the area, specializing in the sale of a wide variety of plants, trees, and gardening supplies. It aims to connect with gardening enthusiasts and homeowners in the community who share a passion for horticulture. While the client does not have an existing website, it envisions a digital presence that reflects the natural beauty of its plant nursery and resonates with gardening enthusiasts in the local community. As the client focuses on sustainability and creativity in its operations, the primary goal of the website is to enhance visibility in the local market, foster community engagement, and facilitate customer inquiries and orders. Its target audience comprises local gardening enthusiasts and homeowners seeking high-quality plants and gardening supplies.
+
+### Hours of Operation:
+
+- Monday–Friday: 9 a.m. to 6 p.m.
+- Saturday–Sunday: 10 a.m. to 5 p.m.
+
+# Color Palette:
+
+Color Palette 2 - Consisting of five color options:
+
+- Canopy Green: #014038
+- Meadow Mist: #96BAA0
+- Sky Bloom: #BDD4DA
+- Sunlit Petal: #F0C06D
+- Cloudy Gray: #F7F7F7
+
+# Gallery Image Files: /public/images
+
+- Client1_AloePlant.png
+- Client1_AppleTree.png
+- Client1_BirchTree.png
+- Client1_BirdHouse.png
+- Client1_MapleTree.png
+- Client1_PottingSoil.png
+- Client1_SpiderPlant.png
+- Client1_StringofPearls.png
+- Client1_WateringCan.png

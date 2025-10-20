@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --background: #014038;
+  --foreground: #f7f7f7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #f7f7f7;
+    --foreground: #014038;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, sans-serif;
+}
