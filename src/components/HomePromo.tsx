@@ -4,7 +4,7 @@ const HomePromo = () => {
   return (
     <div className="max-w-screen-xl mx-auto py-8 px-4 lg:py-16 lg:px-6">
       <div className="text-center mb-10">
-        <h2 className="text-6xl tracking-tight font-bold text-primary-800">
+        <h2 className="text-6xl tracking-tight font-bold text-primary-800 mt-6">
           October Promotions!
         </h2>
       </div>
@@ -29,14 +29,14 @@ const HomePromo = () => {
                 eiusmod tempor
               </p>
               <Link href="/gallery">
-                <button className="btn btn-block btn-success mt-4">
+                <button className="btn btn-block btn-success mt-4 mb-4">
                   Book Now
                 </button>
               </Link>
             </div>
           </div>
           <div className="w-full sm:w-1/2 mb-4 px-2 ">
-            <div className="h-full py-4 px-6 border border-[#F0C06D] border-t-0 border-l-0 rounded-br-xl">
+            <div className="h-full py-4 px-6 border border-[#F0C06D] border-t-0 border-l-0 rounded-br-xl mb-3">
               <h3 className="text-3xl font-bold text-md mb-6">
                 FREE Planting!
               </h3>
@@ -45,7 +45,7 @@ const HomePromo = () => {
                 qui officia deserunt
               </p>
               <Link href="/gallery">
-                <button className="btn btn-block btn-success mt-4">
+                <button className="btn btn-block btn-success mt-4 mb-4">
                   Learn More
                 </button>
               </Link>
@@ -60,7 +60,7 @@ const HomePromo = () => {
                 eiusmod tempor
               </p>
               <Link href="/gallery">
-                <button className="btn btn-block btn-success mt-4">
+                <button className="btn btn-block btn-success mt-4 mb-4">
                   Book Now
                 </button>
               </Link>
@@ -77,7 +77,7 @@ const HomePromo = () => {
                 qui officia deserunt
               </p>
               <Link href="/gallery">
-                <button className="btn btn-block btn-success mt-4">
+                <button className="btn btn-block btn-success mt-4 mb-4">
                   Learn More
                 </button>
               </Link>
