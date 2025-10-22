@@ -13,7 +13,7 @@ const HomePromo = () => {
         <div className="mr-0 md:mr-8 mb-6 md:mb-0">
           <img
             className="rounded-4xl h-full object-cover sm:w-full mx-auto"
-            src="/images/Client1_PottingSoil.png"
+            src="/images/Client1_SpiderPlant.png"
             alt="Potting Soil Image"
           />
         </div>

@@ -2,7 +2,7 @@ import RatingStars from "./ui/ratingStars";
 
 const HomeHero = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-[#F7F7F7]">
       <section className="relative py-12 sm:py-16 lg:pb-40">
         <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-y-4 lg:items-center lg:grid-cols-2 xl:grid-cols-2">

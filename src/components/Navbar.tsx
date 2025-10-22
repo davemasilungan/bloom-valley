@@ -3,6 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Cart from "@components/Cart";
+import { useCart } from "@lib/context/CartContext";
 
 const Navbar = () => {
   const closePopoverMenu = () => {
@@ -20,6 +22,8 @@ const Navbar = () => {
     { href: "/", label: "Sign In" },
     { href: "/", label: "Sign Up" },
   ];
+
+  const { cartItems } = useCart();
 
   return (
     <div className="navbar bg-background sticky top-0 z-50">
@@ -80,13 +84,24 @@ const Navbar = () => {
             ))}
         </ul>
       </div>
-      <div className="navbar-end hidden md:flex">
-        <Link href="/" className="btn btn-link no-underline text-foreground">
-          Sign In
-        </Link>
-        <Link href="/" className="btn ml-1.5">
-          Sign Up
-        </Link>
+      <div className="navbar-end">
+        {cartItems.length > 0 ? (
+          <div className="mr-4">
+            <Cart />
+          </div>
+        ) : (
+          <div className="hidden md:flex">
+            <Link
+              href="/"
+              className="btn btn-link no-underline text-foreground"
+            >
+              Sign In
+            </Link>
+            <Link href="/" className="btn ml-1.5">
+              Sign Up
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

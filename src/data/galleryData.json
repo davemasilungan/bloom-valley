@@ -3,15 +3,15 @@
     "id": 1,
     "name": "Spider Plant",
     "description": "Description of a Spider Plant",
-    "price": "10.99",
+    "price": 10.99,
     "image": "/images/Client1_SpiderPlant.png",
     "type": "product"
   },
   {
     "id": 2,
     "name": "Aloe Plant",
-    "description": "Description a Aloe Plant",
-    "price": "19.99",
+    "description": "Description of an Aloe Plant",
+    "price": 19.99,
     "image": "/images/Client1_AloePlant.png",
     "type": "product"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "String of Pearls",
     "description": "Description of a String of Pearls",
-    "price": "29.99",
+    "price": 29.99,
     "image": "/images/Client1_StringofPearls.png",
     "type": "product"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Classes",
     "description": "Description of Classes available",
-    "price": "39.99",
+    "price": 39.99,
     "image": "/images/Client1_BirdHouse.png",
     "type": "service"
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "name": "Tree Care",
     "description": "Description of Tree Services",
-    "price": "49.99",
+    "price": 49.99,
     "image": "/images/Client1_BirchTree.png",
     "type": "service"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "name": "Consultation",
     "description": "Description of Consultations",
-    "price": "59.99",
+    "price": 59.99,
     "image": "/images/Client1_WateringCan.png",
     "type": "service"
   },
@@ -51,15 +51,15 @@
     "id": 7,
     "name": "Spider Plant",
     "description": "Description of a Spider Plant",
-    "price": "10.99",
+    "price": 10.99,
     "image": "/images/Client1_SpiderPlant.png",
     "type": "product"
   },
   {
     "id": 8,
     "name": "Aloe Plant",
-    "description": "Description a Aloe Plant",
-    "price": "19.99",
+    "description": "Description an Aloe Plant",
+    "price": 19.99,
     "image": "/images/Client1_AloePlant.png",
     "type": "product"
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "name": "String of Pearls",
     "description": "Description of a String of Pearls",
-    "price": "29.99",
+    "price": 29.99,
     "image": "/images/Client1_StringofPearls.png",
     "type": "product"
   },
@@ -75,15 +75,15 @@
     "id": 10,
     "name": "Potting Soil",
     "description": "Description of Potting Soil",
-    "price": "10.99",
+    "price": 10.99,
     "image": "/images/Client1_PottingSoil.png",
     "type": "product"
   },
   {
     "id": 11,
     "name": "Apple Tree",
-    "description": "Description a Apple Tree",
-    "price": "19.99",
+    "description": "Description an Apple Tree",
+    "price": 19.99,
     "image": "/images/Client1_AppleTree.png",
     "type": "product"
   },
@@ -91,7 +91,7 @@
     "id": 12,
     "name": "Maple Tree",
     "description": "Description of a String of Pearls",
-    "price": "29.99",
+    "price": 29.99,
     "image": "/images/Client1_MapleTree.png",
     "type": "product"
   }
