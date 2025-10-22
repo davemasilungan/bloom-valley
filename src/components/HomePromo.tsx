@@ -4,7 +4,7 @@ const HomePromo = () => {
   return (
     <div className="max-w-screen-xl mx-auto py-8 px-4 lg:py-16 lg:px-6">
       <div className="text-center mb-10">
-        <h2 className="text-6xl tracking-tight font-bold text-primary-800 mt-6">
+        <h2 className="text-6xl tracking-tight font-bold text-[#F0C06D] sm:text-800 mt-6">
           October Promotions!
         </h2>
       </div>
@@ -12,7 +12,7 @@ const HomePromo = () => {
       <div className="flex flex-col md:flex-row">
         <div className="mr-0 md:mr-8 mb-6 md:mb-0">
           <img
-            className="h-full object-cover sm:w-full mx-auto"
+            className="rounded-4xl h-full object-cover sm:w-full mx-auto"
             src="/images/Client1_PottingSoil.png"
             alt="Potting Soil Image"
           />
