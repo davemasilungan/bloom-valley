@@ -1,9 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import SocialMediaIcons from "./ui/socialMediaIcons";
 import NewsletterSubscribe from "@components/NewsletterSubscribe";
 
-const ProductPromo = () => {
+const Footer = () => {
   const footerNavLinks = [
     { isCompany: true, href: "/", label: "Home" },
     { isCompany: true, href: "/gallery", label: "Gallery" },
@@ -61,4 +63,4 @@ const ProductPromo = () => {
     </footer>
   );
 };
-export default ProductPromo;
+export default Footer;

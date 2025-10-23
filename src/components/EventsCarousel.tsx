@@ -1,3 +1,5 @@
+"use client";
+
 import { events } from "@data/data";
 import { Calendar } from "lucide-react";
 
