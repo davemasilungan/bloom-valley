@@ -1,4 +1,3 @@
-// components/CartModal.tsx
 "use client";
 
 import { useCart } from "@lib/context/CartContext";
@@ -24,6 +23,7 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
   };
 
   const handleClearCart = () => {
+    alert("Your Cart has been cleared.");
     clearCart();
   };
 

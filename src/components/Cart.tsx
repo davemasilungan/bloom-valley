@@ -1,4 +1,3 @@
-// components/Cart.tsx
 "use client";
 
 import { useCart } from "@lib/context/CartContext";

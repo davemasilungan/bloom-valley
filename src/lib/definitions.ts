@@ -14,3 +14,10 @@ interface AddToCartButtonProps {
 }
 
 export type { AddToCartButtonProps };
+
+interface CartModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export type { CartModalProps };

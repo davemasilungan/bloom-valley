@@ -2,12 +2,12 @@
 
 import React from "react";
 import { Product } from "@lib/definitions";
-import data from "@data/galleryData.json";
-import { useCart } from "@lib/context/CartContext"; // Import the useCart hook
+import { galleryData } from "@data/data";
+import { useCart } from "@lib/context/CartContext";
 
 const GalleryProductCards = () => {
-  const products: Product[] = data;
-  const { addToCart } = useCart(); // Get the addToCart function
+  const products: Product[] = galleryData;
+  const { addToCart } = useCart();
 
   const handleAddToCart = (product: Product) => {
     addToCart(product);
@@ -27,7 +27,6 @@ const GalleryProductCards = () => {
           />
           <div className="px-4 py-3 w-72 flex-grow">
             {" "}
-            {/* Added flex-grow */}
             <span className="text-gray-600 mr-3 uppercase text-xs">
               {product.type.toUpperCase()}
             </span>
@@ -43,10 +42,9 @@ const GalleryProductCards = () => {
           </div>
           <div className="px-4 pb-4">
             {" "}
-            {/* Wrapper for button */}
             <button
               id={`addProductButton-${product.id}`}
-              className="btn btn-block btn-neutral"
+              className="btn btn-block bg-black hover:bg-[#96BAA0] text-white"
               onClick={() => handleAddToCart(product)} // Updated onClick handler
             >
               Add to Cart

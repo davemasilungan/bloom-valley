@@ -1,4 +1,5 @@
 import RatingStars from "./ui/ratingStars";
+import Link from "next/link";
 
 const HomeHero = () => {
   return (
@@ -7,22 +8,22 @@ const HomeHero = () => {
         <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-y-4 lg:items-center lg:grid-cols-2 xl:grid-cols-2">
             <div className="text-center xl:col-span-1 lg:text-left md:px-16 lg:px-0 xl:pr-20">
-              <h1 className="text-4xl font-bold leading-tight text-[#00231C] sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-pj">
+              <h1 className="text-4xl font-extrabold leading-tight text-[#00231C] sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-pj">
                 Your Local & Family-Owned Nursery.
               </h1>
               <p className="mt-2 text-lg text-gray-600 sm:mt-6 font-inter">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vehicula massa in enim luctus. Ritrum arcum.
+                Specializing in the sale of a wide variety of plants, trees, and
+                gardening supplies.
               </p>
 
-              <a
-                href="#"
+              <Link
+                href="/gallery"
                 title=""
                 className="inline-flex px-8 py-4 mt-8 text-lg font-bold text-white transition-all duration-200 bg-background border border-transparent rounded sm:mt-10 font-pj hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                 role="button"
               >
                 View Our Selection
-              </a>
+              </Link>
 
               <div className="mt-8 sm:mt-16">
                 <div className="flex items-center justify-center lg:justify-start">
@@ -34,9 +35,9 @@ const HomeHero = () => {
                     Best staff, and plant selection in town!
                   </p>
                   <p className="mt-2 text-base leading-7 text-gray-600 font-inter">
-                    Consectetur adipiscing elit. Vehicula massa in enim luctus.
-                    Rutrum arcu, aliquam nulla tincidunt gravida. Cursus
-                    convallis.
+                    A true community gem. From the Pumpkin Patch Day to just
+                    stopping by for advice, the team at Bloom Valley always
+                    makes you feel welcome!
                   </p>
                 </blockquote>
 
@@ -53,9 +54,9 @@ const HomeHero = () => {
               </div>
             </div>
 
-            <div className="xl:col-span-1">
+            <div className="xl:col-span-1 ">
               <img
-                className="w-full mx-auto"
+                className="w-full mx-auto rounded-2xl shadow-2xl overflow-hidden"
                 src="/images/Client1_AloePlant_vert.png"
                 alt="Aloe Plant Image"
               />

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import SocialMediaIcons from "./ui/socialMediaIcons";
+import NewsletterSubscribe from "@components/NewsletterSubscribe";
 
 const ProductPromo = () => {
   const footerNavLinks = [
@@ -53,22 +54,7 @@ const ProductPromo = () => {
             ))}
         </ul>
       </nav>
-      <form>
-        <h6 className="text-xl font-bold">NEWSLETTER</h6>
-        <fieldset className="w-80">
-          <label>Enter your email address</label>
-          <div className="join">
-            <input
-              type="text"
-              placeholder="username@site.com"
-              className="input input-bordered join-item mt-1"
-            />
-            <button className="btn bg-[#F0C06D] text-[#00231C] join-item mt-1">
-              Subscribe
-            </button>
-          </div>
-        </fieldset>
-      </form>
+      <NewsletterSubscribe />
       <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
         <SocialMediaIcons />
       </nav>

@@ -51,7 +51,9 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       image: product.image,
     };
     setCartItems((prevItems) => [...prevItems, newItem]);
-    alert("Item added to cart.");
+    alert(
+      `${product.name} at: $${product.price} has been added to your cart."`
+    );
   };
 
   const clearCart = () => {

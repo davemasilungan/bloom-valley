@@ -3,7 +3,7 @@ import GalleryProductCards from "@components/GalleryProductCards";
 
 const Gallery: React.FC = () => {
   return (
-    <div className="bg-[#F7F7F7] pb-8">
+    <div className="bg-[#BDD4DA] pb-8">
       <div className="text-center p-10">
         <h1 className="text-[#00231C] font-bold text-2xl sm:text-6xl sm:mb-4">
           Shop Bloom Valley Nursery

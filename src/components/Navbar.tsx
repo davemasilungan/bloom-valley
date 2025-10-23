@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Cart from "@components/Cart";
+import Profile from "@components/Profile";
 import { useCart } from "@lib/context/CartContext";
 
 const Navbar = () => {
@@ -24,6 +25,14 @@ const Navbar = () => {
   ];
 
   const { cartItems } = useCart();
+
+  // If cart has items, remove "Sign In" and "Sign Up" from Hamburger dropdown menu
+  const filteredNavLinks =
+    cartItems.length > 0
+      ? navLinks.filter(
+          (link) => link.label !== "Sign In" && link.label !== "Sign Up"
+        )
+      : navLinks;
 
   return (
     <div className="navbar bg-background sticky top-0 z-50">
@@ -49,7 +58,8 @@ const Navbar = () => {
             tabIndex={-1}
             className="menu menu-sm dropdown-content bg-background rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            {navLinks.map((link, index) => (
+            {/* Hamburger dropdown menu links */}
+            {filteredNavLinks.map((link, index) => (
               <li onClick={closePopoverMenu} key={index} className="w-full">
                 <Link href={link.href}>{link.label}</Link>
               </li>
@@ -66,13 +76,14 @@ const Navbar = () => {
         </Link>
         <Link
           href="/"
-          className="ml-3 text-nowrap font-bold text-lg md:text-2xl"
+          className="ml-2 text-nowrap font-bold text-lg sm:text-2xl"
         >
           Bloom Valley Nursery
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu text-xl pt-2 menu-horizontal px-1">
+          {/* Horizontal menu links - excluding "Sign In" and "Sign Up" if cart has items */}
           {navLinks
             .filter(
               (link) => link.label !== "Sign In" && link.label !== "Sign Up"
@@ -84,10 +95,12 @@ const Navbar = () => {
             ))}
         </ul>
       </div>
+      {/* Right Side - If Cart has items then Cart and Profile icons, else "Sign In" and "Sign Up" buttons */}
       <div className="navbar-end">
         {cartItems.length > 0 ? (
-          <div className="mr-4">
+          <div className="mr-2">
             <Cart />
+            <Profile />
           </div>
         ) : (
           <div className="hidden md:flex">
