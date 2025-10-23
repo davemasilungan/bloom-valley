@@ -73,13 +73,13 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
             <button
               onClick={handleProcessOrder}
               disabled={cartItems.length === 0}
-              className="btn btn-primary w-full"
+              className="btn bg-black hover:bg-[#96BAA0] w-full"
             >
               Process Order
             </button>
             <button
               onClick={handleClearCart}
-              className="btn btn-outline btn-error w-full"
+              className="btn btn-outline bg-black hover:bg-[#96BAA0] w-full"
             >
               Clear Cart
             </button>
