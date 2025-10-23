@@ -15,9 +15,16 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
   const total = cartItems.reduce((sum, item) => sum + item.price, 0).toFixed(2);
 
   if (!isOpen) return null;
+  const totalItems = cartItems.length;
 
   const handleProcessOrder = () => {
-    alert("Thank you for your purchase.");
+    alert(
+      "Thank you! You have purchased " +
+        totalItems +
+        " items. Your Total is $" +
+        total +
+        "."
+    );
     clearCart();
     onClose();
   };

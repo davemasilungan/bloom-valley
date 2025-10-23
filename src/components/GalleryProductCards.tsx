@@ -26,7 +26,7 @@ const GalleryProductCards = () => {
             alt={product.name + " Image"}
             className="h-80 w-72 object-cover rounded-t-xl"
           />
-          <div className="px-4 py-3 w-72 flex-grow">
+          <div className="px-4 py-3 w-72 grow">
             {" "}
             <span className="text-gray-600 mr-3 uppercase text-xs">
               {product.type.toUpperCase()}

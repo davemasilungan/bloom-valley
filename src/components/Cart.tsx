@@ -2,12 +2,13 @@
 
 import { useCart } from "@lib/context/CartContext";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import CartModal from "@components/CartModal";
 
 const Cart = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { cartItems } = useCart();
-
+  const path = usePathname();
   return (
     <>
       <button

@@ -6,6 +6,7 @@ import Link from "next/link";
 import Cart from "@components/Cart";
 import Profile from "@components/Profile";
 import { useCart } from "@lib/context/CartContext";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const closePopoverMenu = () => {
@@ -24,6 +25,8 @@ const Navbar = () => {
     { href: "/", label: "Sign Up" },
   ];
 
+  const isGalleryPage = usePathname() === "/gallery";
+
   const { cartItems } = useCart();
 
   // If cart has items, remove "Sign In" and "Sign Up" from Hamburger dropdown menu
@@ -35,7 +38,7 @@ const Navbar = () => {
       : navLinks;
 
   return (
-    <div className="pl-6 pr-6 navbar bg-[#014038] sticky top-0 z-50 text-[#F7F7F7]">
+    <div className="pl-2 pr-2 navbar bg-[#014038] sticky top-0 z-50 text-[#F7F7F7]">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -72,12 +75,12 @@ const Navbar = () => {
             alt="Bloom Valley Nursery Logo"
             width={40}
             height={40}
-            className="ml-4"
+            className="invisible md:visible shrink-0 ml-2"
           />
         </Link>
         <Link
           href="/"
-          className="ml-2 text-nowrap font-bold text-lg sm:text-2xl"
+          className="ml-.5 lg:ml-4 text-nowrap font-bold text-lg sm:text-2xl"
         >
           Bloom Valley Nursery
         </Link>
@@ -96,10 +99,10 @@ const Navbar = () => {
             ))}
         </ul>
       </div>
-      {/* Right Side - If Cart has items show Cart and Profile icons else show "Sign In" and "Sign Up" buttons */}
+      {/* Right Side - If Cart has items or is on gallery page, show Cart and Profile icons else show "Sign In" and "Sign Up" buttons */}
       <div className="navbar-end">
-        {cartItems.length > 0 ? (
-          <div className="mr-2">
+        {cartItems.length > 0 || isGalleryPage ? (
+          <div className="mr-1">
             <Cart />
             <Profile />
           </div>
@@ -111,7 +114,7 @@ const Navbar = () => {
             >
               Sign In
             </Link>
-            <Link href="/" className="btn ml-1.5">
+            <Link href="/" className="btn ml-1">
               Sign Up
             </Link>
           </div>
