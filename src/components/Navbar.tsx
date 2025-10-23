@@ -35,7 +35,7 @@ const Navbar = () => {
       : navLinks;
 
   return (
-    <div className="navbar bg-[#014038] sticky top-0 z-50 text-[#F7F7F7]">
+    <div className="pl-6 pr-6 navbar bg-[#014038] sticky top-0 z-50 text-[#F7F7F7]">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -72,6 +72,7 @@ const Navbar = () => {
             alt="Bloom Valley Nursery Logo"
             width={40}
             height={40}
+            className="ml-4"
           />
         </Link>
         <Link

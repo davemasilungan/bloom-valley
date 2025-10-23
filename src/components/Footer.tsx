@@ -18,8 +18,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#014038] footer lg:footer-horizontal text-[#F7F7F7] items-center p-3 mt-3">
-      <aside className="grid-flow-col items-center">
+    <footer className="bg-[#014038] footer lg:footer-horizontal text-[#F7F7F7] items-center p-2 pb-6 mt-2 mb-4">
+      <aside className="grid-flow-col items-center lg:pl-6">
         <Link href="/">
           <Image
             src="/images/Client1_LogoPalette2_F7F7F7.png"
@@ -57,7 +57,7 @@ const Footer = () => {
         </ul>
       </nav>
       <NewsletterSubscribe />
-      <nav className="grid-flow-col gap-4 lg:place-self-center lg:justify-self-end">
+      <nav className="grid-flow-col gap-4 lg:place-self-center lg:justify-self-end lg:pr-6">
         <SocialMediaIcons />
       </nav>
     </footer>
