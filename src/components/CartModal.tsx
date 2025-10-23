@@ -11,7 +11,7 @@ interface CartModalProps {
 const CartModal = ({ isOpen, onClose }: CartModalProps) => {
   const { cartItems, clearCart } = useCart();
 
-  // Calculate the total price
+  // Calculates total price of cart items
   const total = cartItems.reduce((sum, item) => sum + item.price, 0).toFixed(2);
 
   if (!isOpen) return null;
@@ -36,10 +36,11 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
             onClick={onClose}
             className="text-gray-500 hover:text-gray-800 text-2xl"
           >
-            &times;
+            Close X
           </button>
         </div>
         <div className="mt-4 max-h-80 overflow-y-scroll">
+          {/* If no items in cart then show empty cart message else show all cart items */}
           {cartItems.length === 0 ? (
             <p className="text-[#00231C]">Your cart is empty.</p>
           ) : (

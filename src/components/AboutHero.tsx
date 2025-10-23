@@ -7,9 +7,7 @@ const AboutHero = () => {
   return (
     <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Top Section: Description + Image */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
-          {/* Left Column: Description */}
           <div className="pr-0 lg:pr-12">
             <h1 className="text-4xl font-extrabold text-[#00231C] sm:text-5xl mb-6">
               About Bloom Valley Nursery
@@ -28,21 +26,15 @@ const AboutHero = () => {
             </p>
           </div>
 
-          {/* Right Column: Image */}
           <div className="w-full h-80 lg:h-96 rounded-2xl shadow-2xl overflow-hidden">
             <img
               src="/images/Client1_MapleTree.png"
               alt="Bloom Valley Nursery Image"
               className="w-full h-full object-cover"
-              onError={(e) =>
-                (e.currentTarget.src =
-                  "https://placehold.co/600x400/E0E0E0/777777?text=Image+Not+Available")
-              }
             />
           </div>
         </div>
 
-        {/* Bottom Section: 4 Features */}
         <div className="text-center mb-16">
           <h2 className="text-3xl font-extrabold text-[#00231C] sm:text-4xl">
             Why Choose Us?
@@ -50,7 +42,6 @@ const AboutHero = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Feature 1: Quality Plants */}
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
             <div className="flex-shrink-0">
               <Leaf className="h-12 w-12 text-[#96BAA0] mb-4" />
@@ -64,7 +55,6 @@ const AboutHero = () => {
             </p>
           </div>
 
-          {/* Feature 2: Expert Advice */}
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
             <div className="flex-shrink-0">
               <Users className="h-12 w-12 text-[#96BAA0] mb-4" />
@@ -78,7 +68,6 @@ const AboutHero = () => {
             </p>
           </div>
 
-          {/* Feature 3: Fast Delivery */}
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
             <div className="flex-shrink-0">
               <Truck className="h-12 w-12 text-[#96BAA0] mb-4" />
@@ -92,7 +81,6 @@ const AboutHero = () => {
             </p>
           </div>
 
-          {/* Feature 4: Eco-Friendly */}
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
             <div className="flex-shrink-0">
               <Award className="h-12 w-12 text-[#96BAA0] mb-4" />

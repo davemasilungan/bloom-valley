@@ -9,24 +9,24 @@ import React, {
 } from "react";
 import { Product } from "@lib/definitions";
 
-// Define the shape of a cart item
+// Define a cart item
 type CartItem = Pick<Product, "id" | "name" | "price" | "image">;
 
-// Define the shape of the context
+// Define the context
 interface CartContextType {
   cartItems: CartItem[];
   addToCart: (product: Product) => void;
   clearCart: () => void;
 }
 
-// Create the context with a default value
+// Set context with a default value
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-// Create the Provider component
+// Provider component wrapper
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
-  // Effect to load cart from session storage on initial render
+  // Load cart from session storage on initial render
   useEffect(() => {
     try {
       const storedCartItems = sessionStorage.getItem("cart");
@@ -38,7 +38,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     }
   }, []);
 
-  // Effect to save cart to session storage whenever it changes
+  // Save cart to session storage whenever it changes
   useEffect(() => {
     sessionStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
@@ -67,7 +67,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-// Custom hook to use the cart context
+// Access the cart context
 export const useCart = () => {
   const context = useContext(CartContext);
   if (context === undefined) {

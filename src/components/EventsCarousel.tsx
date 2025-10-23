@@ -4,12 +4,12 @@ import { Calendar } from "lucide-react";
 const EventsCarousel = () => {
   return (
     <div className="bg-[#F7F7F7] py-24 px-4 sm:px-6 lg:px-8">
-      {/* Centering container */}
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">
           What's Going On In October
         </h2>
         <div className="flex overflow-x-scroll space-x-8 pb-8 snap-x snap-mandatory">
+          {/* Takes events (data) and creates a card for each event */}
           {events.map((event, index) => (
             <div
               key={index}

@@ -15,6 +15,7 @@ const GalleryProductCards = () => {
 
   return (
     <>
+      {/* Takes galleryData (products) and creates a card for each product */}
       {products.map((product: Product) => (
         <div
           key={product.id}
@@ -45,7 +46,7 @@ const GalleryProductCards = () => {
             <button
               id={`addProductButton-${product.id}`}
               className="btn btn-block bg-black hover:bg-[#96BAA0] text-white"
-              onClick={() => handleAddToCart(product)} // Updated onClick handler
+              onClick={() => handleAddToCart(product)}
             >
               Add to Cart
             </button>

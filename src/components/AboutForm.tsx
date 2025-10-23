@@ -17,7 +17,7 @@ const Contact = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Form submission handler
+  // Form submission
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -39,12 +39,12 @@ const Contact = () => {
 
     setIsModalOpen(false);
 
-    // Clear fields
+    // Clears fields
     setName("");
     setEmail("");
     setMessage("");
 
-    // Clear session storage after submission
+    // Clears session storage
     sessionStorage.removeItem("contactFormData");
   };
 
@@ -62,7 +62,7 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Column*/}
+          {/* Left Column: Info */}
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Get in Touch
@@ -198,7 +198,7 @@ const Contact = () => {
 
       {/* Confirmation Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#BDD4DA] bg-opacity-60">
           <div className="bg-white rounded-lg shadow-2xl p-6 w-full max-w-lg mx-4">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Confirm Your Message
@@ -232,7 +232,7 @@ const Contact = () => {
               <button
                 type="button"
                 onClick={handleConfirmSubmit}
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none"
+                className="px-4 py-2 bg-[#014338] text-white rounded-md hover:bg-[#96BAA0] hover:text-black focus:outline-none"
               >
                 Confirm and Submit
               </button>

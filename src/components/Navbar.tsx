@@ -58,7 +58,7 @@ const Navbar = () => {
             tabIndex={-1}
             className="menu menu-sm dropdown-content bg-background rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            {/* Hamburger dropdown menu links */}
+            {/* Hamburger dropdown menu navigationlinks */}
             {filteredNavLinks.map((link, index) => (
               <li onClick={closePopoverMenu} key={index} className="w-full">
                 <Link href={link.href}>{link.label}</Link>
@@ -83,7 +83,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu text-xl pt-2 menu-horizontal px-1">
-          {/* Horizontal menu links - excluding "Sign In" and "Sign Up" if cart has items */}
+          {/* Horizontal navigation links - excluding "Sign In" and "Sign Up" if cart has items */}
           {navLinks
             .filter(
               (link) => link.label !== "Sign In" && link.label !== "Sign Up"
@@ -95,7 +95,7 @@ const Navbar = () => {
             ))}
         </ul>
       </div>
-      {/* Right Side - If Cart has items then Cart and Profile icons, else "Sign In" and "Sign Up" buttons */}
+      {/* Right Side - If Cart has items show Cart and Profile icons else show "Sign In" and "Sign Up" buttons */}
       <div className="navbar-end">
         {cartItems.length > 0 ? (
           <div className="mr-2">
