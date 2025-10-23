@@ -18,7 +18,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#014038] footer sm:footer-horizontal text-neutral-content items-center p-3 mt-3">
+    <footer className="bg-[#014038] footer lg:footer-horizontal text-[#F7F7F7] items-center p-3 mt-3">
       <aside className="grid-flow-col items-center">
         <Link href="/">
           <Image
@@ -57,7 +57,7 @@ const Footer = () => {
         </ul>
       </nav>
       <NewsletterSubscribe />
-      <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+      <nav className="grid-flow-col gap-4 lg:place-self-center lg:justify-self-end">
         <SocialMediaIcons />
       </nav>
     </footer>
