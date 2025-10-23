@@ -18,8 +18,8 @@ const HomeHero = () => {
 
               <Link
                 href="/gallery"
-                title=""
-                className="inline-flex px-8 py-4 mt-8 text-lg font-bold text-white transition-all duration-200 bg-background border border-transparent rounded sm:mt-10 font-pj hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                title="View Our Selection Button"
+                className="inline-flex px-8 py-4 mt-8 text-lg font-bold text-white transition-all duration-200 bg-[#014038] border border-transparent rounded sm:mt-10 font-pj hover:bg-[#96BAA0] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                 role="button"
               >
                 View Our Selection

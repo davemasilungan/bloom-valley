@@ -35,7 +35,7 @@ const Navbar = () => {
       : navLinks;
 
   return (
-    <div className="navbar bg-background sticky top-0 z-50">
+    <div className="navbar bg-[#014038] sticky top-0 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -56,7 +56,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={-1}
-            className="menu menu-sm dropdown-content bg-background rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-[#014038] rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             {/* Hamburger dropdown menu navigationlinks */}
             {filteredNavLinks.map((link, index) => (

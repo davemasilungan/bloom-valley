@@ -18,7 +18,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-background footer sm:footer-horizontal text-neutral-content items-center p-6 mt-6">
+    <footer className="bg-[#014038] footer sm:footer-horizontal text-neutral-content items-center p-3 mt-3">
       <aside className="grid-flow-col items-center">
         <Link href="/">
           <Image

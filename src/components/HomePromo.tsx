@@ -2,17 +2,17 @@ import Link from "next/link";
 
 const HomePromo = () => {
   return (
-    <div className="max-w-screen-xl mx-auto py-8 px-4 lg:py-16 lg:px-6">
+    <div className="max-w-screen-xl mx-auto py-8 px-4 lg:py-16 lg:px-6 bg-[#014038]">
       <div className="text-center mb-10">
-        <h2 className="text-6xl tracking-tight font-bold sm:text-800 mt-6">
+        <h2 className="text-6xl text-[#F7F7F7] tracking-tight font-bold sm:text-800 mt-6">
           October Promotions!
         </h2>
       </div>
 
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col lg:flex-row">
         <div className="mr-0 md:mr-8 mb-6 md:mb-0">
           <img
-            className="rounded-2xl shadow-2xl overflow-hidden h-full object-cover sm:w-full mx-auto"
+            className="rounded-2xl shadow-2xl overflow-hidden h-full object-cover mx-auto"
             src="/images/Client1_SpiderPlant.png"
             alt="Potting Soil Image"
           />
