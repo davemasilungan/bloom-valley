@@ -28,7 +28,7 @@
 - A description of the client, including the business hours
 - A form for client feedback and custom orders
 
-## The custom page can include the following:
+## The Custom (Events) page can include the following:
 
 - Customer testimonials
 - Community involvements
