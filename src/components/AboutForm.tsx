@@ -3,17 +3,18 @@
 import React, { useState } from "react";
 import { Mail, Phone, Clock, User, AtSign, Send } from "lucide-react";
 
-// Define the shape of the form data
 interface FormData {
   name: string;
   email: string;
   message: string;
+  isCustomOrder: boolean;
 }
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isCustomOrder, setIsCustomOrder] = useState(false); // State for checkbox
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -21,13 +22,13 @@ const Contact = () => {
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const formData: FormData = { name, email, message };
+    const formData: FormData = { name, email, message, isCustomOrder };
 
-    // Save to local session storage
+    // Save to local storage
     try {
-      sessionStorage.setItem("contactFormData", JSON.stringify(formData));
+      localStorage.setItem("contactFormData", JSON.stringify(formData));
     } catch (error) {
-      console.error("Could not save to session storage", error);
+      console.error("Could not save to local storage", error);
     }
 
     setIsModalOpen(true);
@@ -43,9 +44,10 @@ const Contact = () => {
     setName("");
     setEmail("");
     setMessage("");
+    setIsCustomOrder(false); // Reset checkbox state
 
-    // Clears session storage
-    sessionStorage.removeItem("contactFormData");
+    // Clears local storage
+    localStorage.removeItem("contactFormData");
   };
 
   return (
@@ -69,7 +71,7 @@ const Contact = () => {
             </h2>
             <div className="space-y-6">
               <div className="flex items-start">
-                <Mail className="flex-shrink-0 h-6 w-6 text-[#96BAA0] mt-1" />
+                <Mail className="shrink-0 h-6 w-6 text-[#96BAA0] mt-1" />
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900">
                     Our Address
@@ -83,7 +85,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <Phone className="flex-shrink-0 h-6 w-6 text-[#96BAA0] mt-1" />
+                <Phone className="shrink-0 h-6 w-6 text-[#96BAA0] mt-1" />
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900">
                     Contact Phone
@@ -93,7 +95,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <Clock className="flex-shrink-0 h-6 w-6 text-[#96BAA0] mt-1" />
+                <Clock className="shrink-0 h-6 w-6 text-[#96BAA0] mt-1" />
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900">
                     Working Hours
@@ -182,6 +184,25 @@ const Contact = () => {
                 </div>
               </div>
 
+              {/* Checkbox Section */}
+              <div className="flex items-center">
+                <input
+                  id="custom-order"
+                  name="custom-order"
+                  type="checkbox"
+                  checked={isCustomOrder}
+                  onChange={(e) => setIsCustomOrder(e.target.checked)}
+                  className="checkbox border-gray-500 bg-gray-100 checked:border-[#014038] checked:bg-[#96BAA0] checked:text-black"
+                  // className="checkbox bg-gray-700 border border-black"
+                />
+                <label
+                  htmlFor="custom-order"
+                  className="ml-3 block text-sm font-medium text-gray-700"
+                >
+                  Is this a custom order request?
+                </label>
+              </div>
+
               <div>
                 <button
                   type="submit"
@@ -217,6 +238,13 @@ const Contact = () => {
                 <strong className="text-gray-900">Message:</strong>
                 <p className="p-2 bg-gray-100 rounded-md h-24 overflow-y-auto">
                   {message}
+                </p>
+              </div>
+              {/* Display Custom Order Status */}
+              <div>
+                <strong className="text-gray-900">Custom Order Request:</strong>
+                <p className="p-2 bg-gray-100 rounded-md">
+                  {isCustomOrder ? "Yes" : "No"}
                 </p>
               </div>
             </div>
