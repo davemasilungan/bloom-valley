@@ -15,7 +15,7 @@ const EventsCarousel = () => {
           {events.map((event, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg snap-center"
+              className="shrink-0 w-80 bg-white rounded-lg shadow-lg snap-center"
             >
               <div className="flex items-center p-6 border-b border-gray-200">
                 <div className="text-center mr-5">

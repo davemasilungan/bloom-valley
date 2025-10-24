@@ -43,7 +43,7 @@ const HomeHero = () => {
 
                 <div className="flex items-center justify-center mt-2 lg:justify-start">
                   <img
-                    className="flex-shrink-0 object-cover w-6 h-6 overflow-hidden rounded-full"
+                    className="shrink-0 object-cover w-6 h-6 overflow-hidden rounded-full"
                     src="/images/Client1_AloePlant.png"
                     alt="John Deer Icon Image"
                   />

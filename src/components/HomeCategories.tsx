@@ -9,19 +9,19 @@ const HomeCategories = () => {
             Products and Services
           </h1>
         </div>
-        <div className="py-4 px-2 mx-auto max-w-screen-xl sm:py-4 lg:px-6">
+        <div className="py-4 px-2 mx-auto max-w-xl sm:py-4 lg:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full">
             <div className="col-span-2 sm:col-span-1 md:col-span-2 bg-gray-50 h-auto md:h-full flex flex-col">
               <Link
                 href="/gallery"
-                className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-40 flex-grow"
+                className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-40 grow"
               >
                 <img
                   src="/images/Client1_MapleTree.png"
                   alt="Maple Tree Image"
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+                <div className="absolute inset-0 bg-linear-to-b from-gray-900/25 to-gray-900/5"></div>
                 <h3 className="z-10 text-2xl text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl text-shadow-lg/60 font-bold">
                   TREE SERVICES
                 </h3>
@@ -37,7 +37,7 @@ const HomeCategories = () => {
                   alt="Watering Can Image"
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+                <div className="absolute inset-0 bg-linear-to-b from-gray-900/25 to-gray-900/5"></div>
                 <h3 className="z-10 text-2xl font-bold text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl text-shadow-lg/60">
                   GARDEN SUPPLIES
                 </h3>
@@ -52,7 +52,7 @@ const HomeCategories = () => {
                     alt="Apple Tree Image"
                     className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+                  <div className="absolute inset-0 bg-linear-to-b from-gray-900/25 to-gray-900/5"></div>
                   <h3 className="z-10 text-2xl font-bold text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl text-shadow-lg/60">
                     PLANTS
                   </h3>
@@ -66,7 +66,7 @@ const HomeCategories = () => {
                     alt="Potting Soil Image"
                     className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+                  <div className="absolute inset-0 bg-linear-to-b from-gray-900/25 to-gray-900/5"></div>
                   <h3 className="z-10 text-2xl font-bold text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl text-shadow-lg/60">
                     SOILS
                   </h3>
@@ -76,14 +76,14 @@ const HomeCategories = () => {
             <div className="col-span-2 sm:col-span-1 md:col-span-1 bg-sky-50 h-auto md:h-full flex flex-col">
               <Link
                 href="/gallery"
-                className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-40 flex-grow"
+                className="group relative flex flex-col overflow-hidden rounded-2xl px-4 pb-4 pt-40 grow"
               >
                 <img
                   src="/images/Client1_BirdHouse.png"
                   alt="Bird House Image"
                   className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+                <div className="absolute inset-0 bg-linear-to-b from-gray-900/25 to-gray-900/5"></div>
                 <h3 className="z-10 text-2xl font-bold text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl text-shadow-lg/60">
                   CLASSES
                 </h3>

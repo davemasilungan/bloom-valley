@@ -43,7 +43,7 @@ const AboutHero = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <Leaf className="h-12 w-12 text-[#96BAA0] mb-4" />
             </div>
             <h3 className="text-xl font-bold text-[#00231C] mb-2">
@@ -56,7 +56,7 @@ const AboutHero = () => {
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <Users className="h-12 w-12 text-[#96BAA0] mb-4" />
             </div>
             <h3 className="text-xl font-bold text-[#00231C] mb-2">
@@ -69,7 +69,7 @@ const AboutHero = () => {
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <Truck className="h-12 w-12 text-[#96BAA0] mb-4" />
             </div>
             <h3 className="text-xl font-bold text-[#00231C] mb-2">
@@ -82,7 +82,7 @@ const AboutHero = () => {
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <Award className="h-12 w-12 text-[#96BAA0] mb-4" />
             </div>
             <h3 className="text-xl font-bold text-[#00231C] mb-2">

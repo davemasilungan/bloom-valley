@@ -29,7 +29,7 @@ const TestimonialsAccordian = () => {
                 className="flex justify-between items-center w-full p-6 text-left"
               >
                 <div className="flex items-center">
-                  <div className="flex-shrink-0 mr-4">
+                  <div className="shrink-0 mr-4">
                     <img
                       className="h-12 w-12 rounded-full"
                       src={`https://placehold.co/100x100/EBF8FF/3182CE?text=${testimonial.name.charAt(
