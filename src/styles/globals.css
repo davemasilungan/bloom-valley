@@ -26,22 +26,15 @@ body {
 }
 
 @tailwind utilities;
-
-/* 
-Scrollbar styles for modern browsers 
-	scrollbar-color
-	scrollbar-gutter
-	scrollbar-width auto | thin | none
-*/
 * {
   scrollbar-width: auto;
-  scrollbar-color: oklch(var(--s)) oklch(var(--p)) !important;
+  scrollbar-color: #96baa0 #f7f7f7; /* Meadow Mist thumb, Cloudy Gray track */
 }
 
 ::-webkit-scrollbar-track {
-  background: oklch(var(--p));
+  background: #f7f7f7; /* Cloudy Gray */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: oklch(var(--s));
+  background-color: #96baa0; /* Meadow Mist */
 }

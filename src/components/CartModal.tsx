@@ -30,9 +30,7 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
   };
 
   const handleClearCart = () => {
-    alert(
-      "Your Cart has been cleared, " + totalItems + " items have been removed."
-    );
+    alert("Your Cart has been cleared, " + totalItems + " item(s) removed.");
     clearCart();
   };
 
@@ -42,7 +40,7 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
       aria-modal="true"
       aria-labelledby="cart-modal-title"
       onClick={onClose}
-      className="fixed inset-0 bg-[#96BAA0] bg-opacity-50 z-40 flex justify-center items-center"
+      className="fixed inset-0 bg-[#014038]/75 z-40 flex justify-center items-center"
     >
       <div
         onClick={(e) => e.stopPropagation()}
