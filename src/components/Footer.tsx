@@ -18,7 +18,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#014038] footer lg:footer-horizontal text-[#F7F7F7] items-center p-2 pb-6 mt-2 mb-4">
+    <footer
+      aria-label="Site footer"
+      className="bg-[#014038] footer lg:footer-horizontal text-[#F7F7F7] items-center p-2 pb-6 mt-2 mb-4"
+    >
       <aside className="grid-flow-col items-center lg:pl-6">
         <Link href="/">
           <Image
@@ -32,8 +35,10 @@ const Footer = () => {
           Bloom Valley Nursery
         </Link>
       </aside>
-      <nav>
-        <h3 className="text-xl font-bold">SERVICES</h3>
+      <nav aria-labelledby="services-nav-heading">
+        <h3 id="services-nav-heading" className="text-xl font-bold">
+          SERVICES
+        </h3>
         <ul>
           {footerNavLinks
             .filter((link) => !link.isCompany)
@@ -44,8 +49,10 @@ const Footer = () => {
             ))}
         </ul>
       </nav>
-      <nav>
-        <h3 className="text-xl font-bold">COMPANY</h3>
+      <nav aria-labelledby="company-nav-heading">
+        <h3 id="company-nav-heading" className="text-xl font-bold">
+          COMPANY
+        </h3>
         <ul>
           {footerNavLinks
             .filter((link) => link.isCompany)
@@ -57,7 +64,10 @@ const Footer = () => {
         </ul>
       </nav>
       <NewsletterSubscribe />
-      <nav className="grid-flow-col gap-4 lg:place-self-center lg:justify-self-end lg:pr-6">
+      <nav
+        aria-label="Social media links"
+        className="grid-flow-col gap-4 lg:place-self-center lg:justify-self-end lg:pr-6"
+      >
         <SocialMediaIcons />
       </nav>
     </footer>

@@ -40,21 +40,27 @@ const Contact = () => {
 
     setIsModalOpen(false);
 
-    // Clears fields
+    // Clear fields
     setName("");
     setEmail("");
     setMessage("");
     setIsCustomOrder(false); // Reset checkbox state
 
-    // Clears local storage
+    // Clear local storage
     localStorage.removeItem("contactFormData");
   };
 
   return (
-    <div className="bg-[#BDD4DA] py-16 px-4 sm:px-6 lg:px-8">
+    <section
+      aria-labelledby="contact-heading"
+      className="bg-[#BDD4DA] py-16 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-extrabold text-[#00231C] sm:text-5xl">
+          <h1
+            id="contact-heading"
+            className="text-4xl font-extrabold text-[#00231C] sm:text-5xl"
+          >
             Contact Us
           </h1>
           <p className="mt-4 text-xl text-[#00231C] max-w-2xl mx-auto">
@@ -71,7 +77,10 @@ const Contact = () => {
             </h2>
             <div className="space-y-6">
               <div className="flex items-start">
-                <Mail className="shrink-0 h-6 w-6 text-[#96BAA0] mt-1" />
+                <Mail
+                  aria-hidden="true"
+                  className="shrink-0 h-6 w-6 text-[#96BAA0] mt-1"
+                />
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900">
                     Our Address
@@ -85,7 +94,10 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <Phone className="shrink-0 h-6 w-6 text-[#96BAA0] mt-1" />
+                <Phone
+                  aria-hidden="true"
+                  className="shrink-0 h-6 w-6 text-[#96BAA0] mt-1"
+                />
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900">
                     Contact Phone
@@ -95,7 +107,10 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <Clock className="shrink-0 h-6 w-6 text-[#96BAA0] mt-1" />
+                <Clock
+                  aria-hidden="true"
+                  className="shrink-0 h-6 w-6 text-[#96BAA0] mt-1"
+                />
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900">
                     Working Hours
@@ -124,7 +139,10 @@ const Contact = () => {
                 </label>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <User className="h-5 w-5 text-gray-400" />
+                    <User
+                      aria-hidden="true"
+                      className="h-5 w-5 text-gray-400"
+                    />
                   </div>
                   <input
                     type="text"
@@ -148,7 +166,10 @@ const Contact = () => {
                 </label>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <AtSign className="h-5 w-5 text-gray-400" />
+                    <AtSign
+                      aria-hidden="true"
+                      className="h-5 w-5 text-gray-400"
+                    />
                   </div>
                   <input
                     type="email"
@@ -208,7 +229,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#014038] hover:bg-[#96BAA0] hover:text-[#00231C] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >
-                  <Send className="h-5 w-5 mr-2" />
+                  <Send aria-hidden="true" className="h-5 w-5 mr-2" />
                   Send Message
                 </button>
               </div>
@@ -219,9 +240,17 @@ const Contact = () => {
 
       {/* Confirmation Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#BDD4DA] bg-opacity-60">
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="confirm-modal-title"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#BDD4DA] bg-opacity-60"
+        >
           <div className="bg-white rounded-lg shadow-2xl p-6 w-full max-w-lg mx-4">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2
+              id="confirm-modal-title"
+              className="text-2xl font-bold text-gray-900 mb-4"
+            >
               Confirm Your Message
             </h2>
 
@@ -268,7 +297,7 @@ const Contact = () => {
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

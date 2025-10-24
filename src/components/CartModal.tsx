@@ -37,18 +37,42 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-[#96BAA0] bg-opacity-50 z-40 flex justify-center items-center">
-      <div className="bg-white rounded-lg shadow-xl p-6 w-full max-w-md z-50">
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cart-modal-title"
+      onClick={onClose}
+      className="fixed inset-0 bg-[#96BAA0] bg-opacity-50 z-40 flex justify-center items-center"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="bg-white rounded-lg shadow-xl p-6 w-full max-w-md z-50"
+      >
         <div className="flex justify-between items-center border-b border-[#00231C] pb-3">
           <h2 className="text-2xl font-bold text-[#00231C]">Your Cart</h2>
           <button
             onClick={onClose}
-            className="text-lg btn btn-alert hover:bg-red-600 text-gray-200 hover:text-white"
+            className="text-gray-500 hover:text-gray-800"
+            aria-label="Close cart modal"
+            autoFocus // Automatically focus the close button
           >
-            Close Cart
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <title>Close Icon</title>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           </button>
         </div>
-        <div className="mt-4 max-h-80 overflow-y-scroll">
+        <div className="mt-4 max-h-80 overflow-y-auto">
           {/* If no items in cart then show empty cart message else show all cart items */}
           {cartItems.length === 0 ? (
             <p className="text-[#00231C]">Your cart is empty.</p>

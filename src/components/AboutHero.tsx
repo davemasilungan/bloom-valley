@@ -5,11 +5,17 @@ import { Leaf, Truck, Users, Award } from "lucide-react";
 
 const AboutHero = () => {
   return (
-    <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <section
+      aria-labelledby="about-hero-heading"
+      className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
           <div className="pr-0 lg:pr-12">
-            <h1 className="text-4xl font-extrabold text-[#00231C] sm:text-5xl mb-6">
+            <h1
+              id="about-hero-heading"
+              className="text-4xl font-extrabold text-[#00231C] sm:text-5xl mb-6"
+            >
               About Bloom Valley Nursery
             </h1>
             <p className="text-xl text-gray-600 mb-4">
@@ -29,7 +35,7 @@ const AboutHero = () => {
           <div className="w-full h-80 lg:h-96 rounded-2xl shadow-2xl overflow-hidden">
             <img
               src="/images/Client1_MapleTree.png"
-              alt="Bloom Valley Nursery Image"
+              alt="A large, healthy maple tree with vibrant green leaves, backlit by sunshine."
               className="w-full h-full object-cover"
             />
           </div>
@@ -44,7 +50,10 @@ const AboutHero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
             <div className="flex-shrink-0">
-              <Leaf className="h-12 w-12 text-[#96BAA0] mb-4" />
+              <Leaf
+                aria-hidden="true"
+                className="h-12 w-12 text-[#96BAA0] mb-4"
+              />
             </div>
             <h3 className="text-xl font-bold text-[#00231C] mb-2">
               Quality Plants
@@ -57,7 +66,10 @@ const AboutHero = () => {
 
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
             <div className="flex-shrink-0">
-              <Users className="h-12 w-12 text-[#96BAA0] mb-4" />
+              <Users
+                aria-hidden="true"
+                className="h-12 w-12 text-[#96BAA0] mb-4"
+              />
             </div>
             <h3 className="text-xl font-bold text-[#00231C] mb-2">
               Expert Advice
@@ -70,7 +82,10 @@ const AboutHero = () => {
 
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
             <div className="flex-shrink-0">
-              <Truck className="h-12 w-12 text-[#96BAA0] mb-4" />
+              <Truck
+                aria-hidden="true"
+                className="h-12 w-12 text-[#96BAA0] mb-4"
+              />
             </div>
             <h3 className="text-xl font-bold text-[#00231C] mb-2">
               Fast Delivery
@@ -83,7 +98,10 @@ const AboutHero = () => {
 
           <div className="bg-white p-8 rounded-2xl shadow-lg text-center flex flex-col items-center">
             <div className="flex-shrink-0">
-              <Award className="h-12 w-12 text-[#96BAA0] mb-4" />
+              <Award
+                aria-hidden="true"
+                className="h-12 w-12 text-[#96BAA0] mb-4"
+              />
             </div>
             <h3 className="text-xl font-bold text-[#00231C] mb-2">
               Eco-Friendly
@@ -95,7 +113,7 @@ const AboutHero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

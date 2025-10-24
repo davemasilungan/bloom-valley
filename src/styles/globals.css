@@ -24,3 +24,24 @@ body {
   color: var(--foreground);
   font-family: Arial, sans-serif;
 }
+
+@tailwind utilities;
+
+/* 
+Scrollbar styles for modern browsers 
+	scrollbar-color
+	scrollbar-gutter
+	scrollbar-width auto | thin | none
+*/
+* {
+  scrollbar-width: auto;
+  scrollbar-color: oklch(var(--s)) oklch(var(--p)) !important;
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(var(--p));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: oklch(var(--s));
+}

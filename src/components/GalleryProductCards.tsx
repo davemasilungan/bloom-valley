@@ -23,7 +23,7 @@ const GalleryProductCards = () => {
         >
           <img
             src={product.image}
-            alt={product.name + " Image"}
+            alt={product.name}
             className="h-80 w-72 object-cover rounded-t-xl"
           />
           <div className="px-4 py-3 w-72 grow">
@@ -47,6 +47,7 @@ const GalleryProductCards = () => {
               id={`addProductButton-${product.id}`}
               className="btn btn-block bg-black hover:bg-[#96BAA0] text-white"
               onClick={() => handleAddToCart(product)}
+              aria-label={`Add ${product.name} to cart`}
             >
               Add to Cart
             </button>

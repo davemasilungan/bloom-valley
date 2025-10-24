@@ -2,18 +2,26 @@
 
 import { useCart } from "@lib/context/CartContext";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 import CartModal from "@components/CartModal";
 
 const Cart = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { cartItems } = useCart();
-  const path = usePathname();
+
+  // Dynamic label for button
+  const cartLabel =
+    cartItems.length > 0
+      ? `View shopping cart, ${cartItems.length} item${
+          cartItems.length > 1 ? "s" : ""
+        }`
+      : "View shopping cart, 0 items";
+
   return (
     <>
       <button
         onClick={() => setIsModalOpen(true)}
         className="btn btn-ghost btn-circle"
+        aria-label={cartLabel}
       >
         <div className="indicator">
           <svg
@@ -22,6 +30,7 @@ const Cart = () => {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -31,7 +40,10 @@ const Cart = () => {
             />
           </svg>
           {cartItems.length > 0 && (
-            <span className="badge badge-sm badge-primary indicator-item">
+            <span
+              aria-hidden="true"
+              className="badge badge-sm badge-primary indicator-item"
+            >
               {cartItems.length}
             </span>
           )}

@@ -24,13 +24,14 @@ const NewsletterSubscribe = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h6 className="text-xl font-bold text-center">NEWSLETTER</h6>
+      <legend className="text-xl font-bold text-center">NEWSLETTER</legend>
       <fieldset className="w-80">
-        <label className="label">
+        <label htmlFor="newsletter-email" className="label">
           <span className="label-text">Enter your email address</span>
         </label>
         <div className="join">
           <input
+            id="newsletter-email"
             type="email"
             placeholder="username@site.com"
             className="input mt-1 bg-white text-black focus:outline-1 "

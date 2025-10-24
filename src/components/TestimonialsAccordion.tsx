@@ -13,9 +13,15 @@ const TestimonialsAccordion = () => {
   };
 
   return (
-    <div className="w-full bg-[#BDD4DA] py-24 px-4 sm:px-6 lg:px-8">
+    <section
+      aria-labelledby="testimonials-heading"
+      className="w-full bg-[#BDD4DA] py-24 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">
+        <h2
+          aria-label="testimonials-heading"
+          className="text-3xl font-extrabold text-gray-900 text-center mb-12"
+        >
           What Our Visitors Say
         </h2>
         <div className="space-y-4 bg-[#F7F7F7]">
@@ -43,13 +49,14 @@ const TestimonialsAccordion = () => {
                       {testimonial.name}
                     </div>
                     <div className="flex items-center text-sm text-gray-500">
-                      <MapPin className="w-4 h-4 mr-1" />
+                      <MapPin aria-label="hidden" className="w-4 h-4 mr-1" />
                       {testimonial.location}
                     </div>
                   </div>
                 </div>
                 <ChevronDown
-                  className={`w-6 h-6 text-green-700 transition-transform ${
+                  aria-label="hidden"
+                  className={`w-6 h-6 text-green-700 transition-transform  ${
                     openIndex === index ? "transform rotate-180" : ""
                   }`}
                 />
@@ -59,7 +66,7 @@ const TestimonialsAccordion = () => {
                   openIndex === index ? "max-h-96" : "max-h-0"
                 }`}
               >
-                <div className="p-6 bg-gray-50">
+                <div aria-label="hidden" className="p-6 bg-gray-50">
                   <RatingStars />
                   <p className="text-lg text-gray-700 italic">
                     "{testimonial.quote}"
@@ -70,7 +77,7 @@ const TestimonialsAccordion = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

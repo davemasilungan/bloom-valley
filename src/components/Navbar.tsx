@@ -41,13 +41,19 @@ const Navbar = () => {
     <div className="pl-2 pr-2 navbar bg-[#014038] sticky top-0 z-50 text-[#F7F7F7]">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <button
+            type="button"
+            className="btn btn-ghost lg:hidden"
+            aria-label="Open navigation menu"
+            aria-haspopup="true"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-8 w-8"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -56,14 +62,21 @@ const Navbar = () => {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-          </div>
+          </button>
           <ul
-            tabIndex={-1}
+            tabIndex={0}
             className="menu menu-sm dropdown-content bg-[#014038] rounded-box z-1 mt-3 w-52 p-2 shadow"
+            role="menu"
+            aria-labelledby="navbar-menu-button"
           >
             {/* Hamburger dropdown menu navigationlinks */}
             {filteredNavLinks.map((link, index) => (
-              <li onClick={closePopoverMenu} key={index} className="w-full">
+              <li
+                onClick={closePopoverMenu}
+                key={index}
+                className="w-full"
+                role="menuitem"
+              >
                 <Link href={link.href}>{link.label}</Link>
               </li>
             ))}
@@ -85,7 +98,10 @@ const Navbar = () => {
           Bloom Valley Nursery
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <nav
+        aria-label="Main navigation"
+        className="navbar-center hidden lg:flex"
+      >
         <ul className="menu text-xl pt-2 menu-horizontal px-1">
           {/* Horizontal navigation links - excluding "Sign In" and "Sign Up" if cart has items */}
           {navLinks
@@ -98,7 +114,7 @@ const Navbar = () => {
               </li>
             ))}
         </ul>
-      </div>
+      </nav>
       {/* Right Side - If Cart has items or is on gallery page, show Cart and Profile icons else show "Sign In" and "Sign Up" buttons */}
       <div className="navbar-end">
         {cartItems.length > 0 || isGalleryPage ? (
