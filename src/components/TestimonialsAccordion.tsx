@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { testimonials } from "@data/data";
 import RatingStars from "./ui/ratingStars";
 
-const TestimonialsAccordian = () => {
+const TestimonialsAccordion = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleAccordion = (index: number) => {
@@ -74,4 +74,4 @@ const TestimonialsAccordian = () => {
   );
 };
 
-export default TestimonialsAccordian;
+export default TestimonialsAccordion;
