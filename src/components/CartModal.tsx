@@ -30,7 +30,9 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
   };
 
   const handleClearCart = () => {
-    alert("Your Cart has been cleared.");
+    alert(
+      "Your Cart has been cleared, " + totalItems + " items have been removed."
+    );
     clearCart();
   };
 
@@ -41,9 +43,9 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
           <h2 className="text-2xl font-bold text-[#00231C]">Your Cart</h2>
           <button
             onClick={onClose}
-            className="text-gray-500 hover:text-gray-800 text-2xl"
+            className="text-lg btn btn-alert hover:bg-red-600 text-gray-200 hover:text-white"
           >
-            Close X
+            Close Cart
           </button>
         </div>
         <div className="mt-4 max-h-80 overflow-y-scroll">
@@ -80,14 +82,22 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
             <button
               onClick={handleProcessOrder}
               disabled={cartItems.length === 0}
-              className="btn text-white hover:text-black bg-black hover:bg-[#96BAA0] w-full"
+              className={
+                cartItems.length === 0
+                  ? "btn btn-outline text-gray-500 bg-black hover:bg-[#96BAA0] w-full text-xl"
+                  : "btn btn-outline text-white bg-black hover:bg-[#96BAA0] w-full text-xl"
+              }
             >
               Process Order
             </button>
             <button
               onClick={handleClearCart}
               disabled={cartItems.length === 0}
-              className="btn btn-outline bg-black hover:bg-[#96BAA0] w-full"
+              className={
+                cartItems.length === 0
+                  ? "btn btn-outline text-gray-500 bg-black hover:bg-[#96BAA0] w-full text-xl"
+                  : "btn btn-outline text-white bg-black hover:bg-[#96BAA0] w-full text-xl"
+              }
             >
               Clear Cart
             </button>
