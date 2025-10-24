@@ -244,7 +244,7 @@ const Contact = () => {
           role="dialog"
           aria-modal="true"
           aria-labelledby="confirm-modal-title"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-[#BDD4DA] bg-opacity-60"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#BDD4DA]/75 bg-opacity-60"
         >
           <div className="bg-white rounded-lg shadow-2xl p-6 w-full max-w-lg mx-4">
             <h2
