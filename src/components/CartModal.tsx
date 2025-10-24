@@ -80,7 +80,7 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
             <button
               onClick={handleProcessOrder}
               disabled={cartItems.length === 0}
-              className="btn bg-black hover:bg-[#96BAA0] w-full"
+              className="btn text-white hover:text-black bg-black hover:bg-[#96BAA0] w-full"
             >
               Process Order
             </button>
