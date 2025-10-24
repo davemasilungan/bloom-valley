@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const HomePromo = () => {
   return (
-    <div className="max-w-xl mx-auto py-8 px-4 lg:py-16 lg:px-6 bg-[#014038]">
+    <div className="max-w-screen-xl mx-auto py-8 px-4 lg:py-16 lg:px-6 bg-[#014038]">
       <div className="text-center mb-10">
         <h2 className="text-6xl text-[#F7F7F7] tracking-tight font-bold sm:text-800 mt-6">
           October Promotions!
