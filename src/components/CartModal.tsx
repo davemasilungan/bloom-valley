@@ -86,6 +86,7 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
             </button>
             <button
               onClick={handleClearCart}
+              disabled={cartItems.length === 0}
               className="btn btn-outline bg-black hover:bg-[#96BAA0] w-full"
             >
               Clear Cart
