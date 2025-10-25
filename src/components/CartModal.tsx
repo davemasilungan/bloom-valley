@@ -21,7 +21,7 @@ const CartModal = ({ isOpen, onClose }: CartModalProps) => {
     alert(
       "Thank you! You have purchased " +
         totalItems +
-        " items. Your Total is $" +
+        " item(s). Your Total is $" +
         total +
         "."
     );
