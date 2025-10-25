@@ -45,7 +45,7 @@ Bloom Valley Nursery operates as a local, family-owned plant nursery in the area
 - Monday–Friday: 9 a.m. to 6 p.m.
 - Saturday–Sunday: 10 a.m. to 5 p.m.
 
-# :sparkles: Color Palette:
+## :sparkles: Color Palette:
 
 Color Palette 2 - Consisting of five color options:
 
@@ -55,7 +55,7 @@ Color Palette 2 - Consisting of five color options:
 - Sunlit Petal: #F0C06D
 - Cloudy Gray: #F7F7F7
 
-# :sparkles: Gallery Image Files: /public/images
+## :sparkles: Gallery Image Files: /public/images
 
 - Client1_AloePlant.png
 - Client1_AppleTree.png
