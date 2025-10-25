@@ -1,8 +1,8 @@
-# SOPHIA.COM Introduction to Web Development
+#Introduction to Web Development
 
-# UNIT 3 Touchstone 3: Develop a Functional Website
+# :boom::boom::boom: UNIT 3 Touchstone 3: Develop a Functional Website :boom::boom::boom:
 
-# REQUIREMENTS:
+# :rocket: REQUIREMENTS:
 
 ## All the pages should contain a header and a footer section, where the following requirements should be met:
 
